@@ -1,20 +1,12 @@
-*.class
-*.jar
-*.war
-
-# Maven
-target/
-
-# IDE
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.env/
+.venv/
 .idea/
-*.iml
 .vscode/
 .kiro/
 *.swp
-
-# OS
 .DS_Store
 Thumbs.db
-
-# Build
-out/

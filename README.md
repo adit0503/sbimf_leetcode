@@ -1,11 +1,11 @@
-# LeetCode Practice (Java)
+# LeetCode Practice (Python)
 
-Solving LeetCode problems in Java, organized by topic.
+Solving LeetCode problems in Python, organized by topic.
 
 ## Structure
 
 ```
-src/main/java/          ← solutions
+solutions/          ← your code
   arrays/
   strings/
   linked_list/
@@ -16,22 +16,32 @@ src/main/java/          ← solutions
   binary_search/
   stack_queue/
 
-src/test/java/          ← tests (mirrors the above)
+tests/              ← pytest test files (mirrors solutions/)
 ```
 
-## How to Run
+## Setup
 
-Requires [Maven](https://maven.apache.org/download.cgi) installed and on PATH.
+```bash
+pip install -r requirements.txt
+```
+
+## How to Run Tests
 
 ```bash
 # Run all tests
-mvn test
+pytest
 
 # Run tests for a specific problem
-mvn test -Dtest="arrays.LC0001_TwoSumTest"
+pytest tests/arrays/test_lc0001_two_sum.py
 
-# Compile only
-mvn compile
+# Run only solution1 tests
+pytest tests/arrays/test_lc0001_two_sum.py::TestSolution1
+
+# Run a single test
+pytest tests/arrays/test_lc0001_two_sum.py::TestSolution1::test_basic
+
+# Verbose output
+pytest -v
 ```
 
 ## Progress
